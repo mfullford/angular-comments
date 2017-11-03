@@ -1,4 +1,21 @@
-<h1>Comments</h1>
+<h1>COMMENTS</h1>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+<input type="text" class="first" value="Phrase" placeholder='Comment' [(ngModel)]="phrase">
+<input type="text" class="first" id="box2" value="Author" placeholder='Author' [(ngModel)]="author">
+<input type="submit" class="submit" value="Add" (click)='addComment(phrase, author)'>
+
 <ul>
-    <li *ngFor="let comment of comments">{{comment}}</li>
+    <li *ngFor="let comment of comments">
+    	<br>
+    	<input class="box" type='text' [attr.disabled]="editValue" value="{{comment.phrase}}" >
+    	<br>
+    	<input class="box" type='text' [attr.disabled]="editValue" value= "Author: {{comment.author}}">
+    	<br>
+    	<input type="submit" class="submit" value="Delete" (click)='deleteComment(comment)'>
+		<input type="submit" class="submit" value="Edit" (click)='editComment()'>
+		<input type="submit" class="submit" value="Save" (click)='saveComment()'>
+    </li>
 </ul>
+

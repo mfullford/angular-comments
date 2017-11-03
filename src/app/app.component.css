@@ -1,0 +1,35 @@
+li {
+	list-style-type: none;
+}
+h1 {
+	margin-left: 8%;
+}
+.box {
+	width: 50%;
+	border-radius: 3px;
+	border: 1px solid grey;
+	margin-top: 10px;
+	margin-left: 2%;
+}
+
+#box2 {
+	margin-left: 1%;
+}
+.submit {
+	margin-left: 2%;
+	margin-top: 10px;
+	border-radius: 3px;
+	box-shadow: 0px;
+	background-color: rgb(100,149,237);
+	border: 1px solid grey;
+}
+
+.submit:hover {
+	background-color: rgba(65,105,225,.9);
+}
+
+.first {
+	margin-left: 7%;
+	border-radius: 3px;
+	border: 1px solid grey;
+}
